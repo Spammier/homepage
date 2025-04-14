@@ -1,0 +1,80 @@
+/*
+--svgcolor svg图标的颜色
+--main-bg-color主页背景
+--main-text-color文本颜色
+--gradient标题渐变颜色
+
+--purple-text-color描述紫色文本颜色
+--text-bg-color描述紫色文本背景颜色
+--item-bg-color项目背景颜色
+--item-hover-color项目鼠标移入颜色
+--item-left-title-color项目标题颜色
+--item-left-text-color项目描述颜色
+--footer-text-color底部文本颜色
+--left-tag-item左侧标签颜色
+--card-filter卡片模糊的数值
+--back-filter背景模糊的数值
+--back-filter-color全局阴影遮罩
+
+*/
+/*卡片模糊的数值非常吃性能,背景模糊的数值可以模糊也可以不模糊
+
+0为不模糊,数值越大模糊程度越高
+
+这两个任选其一进行模糊
+
+一个有数字另一个建议为0
+
+
+内置4套白天主题修改办法
+
+
+
+每套主题的结构都为html{
+    
+}
+
+只有最下面的会生效,也就是将你要设置的主题剪切到最下面
+*/
+
+/* 亮色主题使用背景图片 */
+html[theme="Light"] {
+  --name: 亮色主题;
+  --main_bg_color: url(/static/img/background.jpg); /* 改回指向public目录的绝对路径 */
+  --main_text_color: #000000;
+  --gradient: linear-gradient(120deg, #bd34fe, #e0321b 30%, #41d1ff 60%);
+  --purple_text_color: #747bff;
+  --text_bg_color: rgb(121 163 231);
+  --item_bg_color: rgba(249, 250, 251, 0.42);
+  --item_hover_color: rgba(244, 245, 246, 0.8);
+  --item_left_title_color: #000000;
+  --item_left_text_color: #494949;
+  --footer_text_color: #ffffff;
+  --left_tag_item: #c7e1fa;
+  --card_filter: 0px;
+  --back_filter: 10px;
+  --back_filter_color: #00000030;
+  --fill:#000000;
+  will-change: auto;
+}
+
+/* 添加暗色主题，整个页面变黑 */
+html[theme="Dark"] {
+  --name: 暗色主题;
+  --main_bg_color: #121212; /* 深色背景 */
+  --main_text_color: #e0e0e0; /* 主要文字颜色 (浅灰) */
+  --gradient: linear-gradient(120deg, #bd34fe, #e0321b 30%, #41d1ff 60%); /* 渐变可以保持 */
+  --purple_text_color: #9fa8da; /* 紫色文字 (浅紫) */
+  --text_bg_color: #37474f; /* 文字背景 (深蓝灰) */
+  --item_bg_color: #212121; /* 项目卡片背景 (比主背景稍亮) */
+  --item_hover_color: #333333; /* 项目卡片悬停背景 */
+  --item_left_title_color: #ffffff; /* 项目标题 (白色) */
+  --item_left_text_color: #bdbdbd; /* 项目描述 (浅灰) */
+  --footer_text_color: #9e9e9e; /* 页脚文字 (中灰) */
+  --left_tag_item: #37474f; /* 左侧标签背景 (深蓝灰) */
+  --card_filter: 0px; /* 通常暗色模式不需要模糊 */
+  --back_filter: 0px;
+  --back_filter_color: #00000000;
+  --fill:#e0e0e0; /* SVG图标颜色 (浅灰) */
+  will-change: auto;
+}
