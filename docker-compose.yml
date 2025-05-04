@@ -1,0 +1,15 @@
+# /opt/homepage/docker-compose.yml
+version: '3.8'
+
+networks:
+  shared-network:
+    external: true # Reference the existing shared network
+
+services:
+  homepage_frontend:
+    build: . # Build from Dockerfile in the current directory
+    container_name: homepage_app # Unique container name
+    restart: always
+    networks:
+      - shared-network # Connect to the shared network
+    # No 'ports' section needed here, reverse proxy handles external access 

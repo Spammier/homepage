@@ -1,9 +1,14 @@
+version: '3.8'
+
+networks:
+  shared-network:
+    external: true # 引用外部共享网络
+
 services:
-  caddy:
+  homepage_frontend: # 服务名称，反向代理会用它来找到容器
     build: .
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile    # 映射Caddyfile配置
+    container_name: homepage_frontend_app # 唯一的容器名
     restart: always
+    networks:
+      - shared-network # 连接到共享网络
+    # 不需要 ports 映射到宿主机，反向代理会处理端口
