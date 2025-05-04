@@ -140,6 +140,15 @@
               <img :src="i2Url" alt="">
             </div>
           </a>
+          <a class="projectItem b" target="_blank" href="http://www.doitapp.top">
+            <div class="projectItemLeft">
+              <h1>DoIt</h1>
+              <p>我的第一个分布式项目</p>
+            </div>
+            <div class="projectItemRight">
+              <img :src="doitImageUrl" alt="DoIt Project">
+            </div>
+          </a>
         </div>
       
         <div class="title">
@@ -185,6 +194,7 @@ import shizhongUrl from '@/assets/img/实中校徽.png';
 import i6Url from '@/assets/img/i6.png';
 import i2Url from '@/assets/img/i2.png';
 import qrcodeUrl from '@/assets/img/二维码.png';
+import doitImageUrl from '@/assets/img/doit.png';
 
 // 导入SVG资源
 import snakeLightUrl from '@/assets/svg/snake-Light.svg';
