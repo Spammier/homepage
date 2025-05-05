@@ -140,7 +140,7 @@
               <img :src="i2Url" alt="">
             </div>
           </a>
-          <a class="projectItem b" target="_blank" href="http://www.doitapp.top">
+          <a class="projectItem b" target="_blank" href="https://www.doitapp.top">
             <div class="projectItemLeft">
               <h1>DoIt</h1>
               <p>我的第一个分布式项目</p>
