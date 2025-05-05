@@ -122,7 +122,7 @@
           </svg>Project
         </div>
         <div class="projectList">
-          <a class="projectItem b" target="_blank" href="https://wzsyyhdheilr.sealoshzh.site">
+          <a class="projectItem b" target="_blank" href="https://jsxh.doitapp.top/login">
             <div class="projectItemLeft">
               <h1>精神小伙管理器</h1>
               <p>我的第一个后端项目</p>
