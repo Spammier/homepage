@@ -48,7 +48,7 @@
 /*卡片模糊背景＋黑色透明卡片+白色svg**/
 html{
     --name: 主题1;
-    --main_bg_color: url(../img/background.jpg);
+    --main_bg_color: url(../img/optimized/background.webp);
     --main_text_color: #eeeeee;
     --gradient: linear-gradient(120deg, #bd34fe, #e0321b 30%, #41d1ff 60%);
     --purple_text_color: #747bff;
@@ -71,7 +71,7 @@ html  {
 
     /*图片模糊背景＋白色透明卡片+黑色svg*/
     --name: 主题2;
-    --main_bg_color: url(../img/background.jpg);
+    --main_bg_color: url(../img/optimized/background.webp);
     --main_text_color: #000000;
     --gradient: linear-gradient(120deg, #bd34fe, #e0321b 30%, #41d1ff 60%);
     --purple_text_color: #747bff;
@@ -134,7 +134,7 @@ html {
 html{
     /*图片模糊背景＋黑色透明卡片+白色svg**/
     --name: 主题5;
-    --main_bg_color: url(../img/background.jpg);
+    --main_bg_color: url(../img/optimized/background.webp);
     --main_text_color: #eeeeee;
     --gradient: linear-gradient(120deg, #bd34fe, #e0321b 30%, #41d1ff 60%);
     --purple_text_color: #747bff;
@@ -175,7 +175,7 @@ html[theme="Dark"] {
 /* 亮色主题使用背景图片 */
 html[theme="Light"] {
   --name: 亮色主题;
-  --main_bg_color: url(../img/background.jpg);
+  --main_bg_color: url(../img/optimized/background.webp);
   --main_text_color: #000000;
   --gradient: linear-gradient(120deg, #bd34fe, #e0321b 30%, #41d1ff 60%);
   --purple_text_color: #747bff;
@@ -191,4 +191,11 @@ html[theme="Light"] {
   --back_filter_color: #00000030;
   --fill:#000000;
   will-change: auto;
+}
+
+/* 为不支持 WebP 的浏览器提供备用 JPG */
+@supports not (background-image: url(../img/optimized/background.webp)) {
+  html[theme="Light"] {
+    --main_bg_color: url(../img/optimized/background-compressed.jpg);
+  }
 }

@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spammie</title>
 	<meta name="description" content="整天半吊子和不学无术的坏孩子,梦想成为庄稼地里的读书人.....">
+    
+    <!-- 预加载关键资源 -->
+    <link rel="preload" as="image" href="/static/img/optimized/background.webp" type="image/webp">
+    <link rel="preload" fetchpriority="high" as="image" href="/static/img/optimized/background.webp" type="image/webp">
+    <!-- 为不支持 WebP 的浏览器提供备用 -->
+    <link rel="preload" as="image" href="/static/img/optimized/background-compressed.jpg" type="image/jpeg">
+    
     <!-- 性能优化 -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
